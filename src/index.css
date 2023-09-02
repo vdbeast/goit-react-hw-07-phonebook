@@ -13,3 +13,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.submit_form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 250px;
+  border: 1px solid;
+  padding: 5px;
+}
+
+.label{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 10px;
+}
+
+.submit_btn{
+  width: 100px;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.delete_btn {
+  margin-left: 20px;
+  width: 70px;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 5px;
+}
