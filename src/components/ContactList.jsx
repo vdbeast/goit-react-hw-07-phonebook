@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import ContactItem from "./ContactItem";
 import PropTypes from "prop-types";
-import { deleteContact } from "../redux/reducer";
+import { deleteContacts } from "../redux/api";
 import { selectContacts, selectFilter } from "../redux/selectors";
 
 const ContactList = ({ onDelete }) => {
@@ -15,7 +15,7 @@ const ContactList = ({ onDelete }) => {
   );
 
   const handleDeleteContact = useCallback(contactId => {
-    dispatch(deleteContact(contactId));
+    dispatch(deleteContacts(contactId));
   }, [dispatch]);
 
   return (
