@@ -11,12 +11,12 @@ const initialState = {
 };
 
 const handlePending = (state) => {
-    state.isLoading = true
+    state.contacts.isLoading = true
 };
 
 const handleRejected = (state, action) => {
-    state.isLoading = false;
-    state.error = action.payload
+    state.contacts.isLoading = false;
+    state.contacts.error = action.payload
 }
 
 const contactsSlice = createSlice({
