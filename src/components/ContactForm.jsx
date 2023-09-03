@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addContacts } from "../redux/api";
+import { addContact } from "../redux/api";
 import { nanoid } from 'nanoid';
 
 const ContactForm = () => {
@@ -10,7 +10,7 @@ const ContactForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addContacts({ id: nanoid(), name, number }));
+        dispatch(addContact({ id: nanoid(), name, number }));
         setName('');
         setNumber('');
     };

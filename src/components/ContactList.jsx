@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import ContactItem from "./ContactItem";
 import PropTypes from "prop-types";
-import { deleteContacts } from "../redux/api";
+import { deleteContact } from "../redux/api";
 import { selectContacts, selectFilter } from "../redux/selectors";
 
 const ContactList = ({ onDelete }) => {
@@ -14,8 +14,8 @@ const ContactList = ({ onDelete }) => {
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
-  const handleDeleteContact = useCallback(contactId => {
-    dispatch(deleteContacts(contactId));
+  const handleDeleteContact = useCallback((contactId) => {
+    dispatch(deleteContact(contactId));
   }, [dispatch]);
 
   return (
